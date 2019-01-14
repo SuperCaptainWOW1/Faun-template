@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Faun</title>
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Oswald:200,400,700" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/search.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="top-header">
+                <div class="toggle"></div>
+                <div class="overlay"></div>
+                <div class="menu">
+                    <ul>
+                        <li class="menu-item"><a href="#about-us">about us</a></li>
+                        <li class="menu-item"><a href="#video">our videos</a></li>
+                        <li class="menu-item"><a href="#gallery">gallery</a></li>
+                        <li class="menu-item"><a href="#contact">contact us</a></li>
+                    </ul>
+                </div>
+
+                <a href="index.html" class="logo">faun</a>
+                <div class="search"></div>
+
+
+            </div>
+            <div class="main-header">
+                <div class="welc-text">
+                    <span class="main1">a safe kind</span><br>
+                    <span class="main2">music is</span><br>
+                    <span class="main3">of high</span><br>
+                    <input class="vm-button" type="button" value="view more">
+                </div>
+            </div>
+        </div>
+    </header>
+    <article class="about-us" id="about-us">
+        <div class="container">
+            <div class="about-desc">
+                <h2>about us</h2>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a tincidunt dui, vitae posuere ipsum. Praesent vehicula nunc eget risus vehicula rutrum. Vestibulum pulvinar sapien tellus, sit amet ultrices turpis vestibulum at.
+                </p>
+                <input class="ch-button" type="button" value="check our tour">
+            </div>
+            <div class="about-pic">
+                <img src="img/about-us-pic.png" alt="">
+            </div>
+        </div>
+    </article>
+    <article class="video" id="video">
+        <div class="container">
+            <div class="player-btn">
+                <img src="img/player.png" alt="">
+            </div>
+            <div class="video-desc">
+                <h2>our newest video</h2>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a tincidunt dui, vitae posuere ipsum. Praesent vehicula nunc eget risus vehicula rutrum. Vestibulum pulvinar sapien tellus, sit amet ultrices turpis vestibulum at.
+                </p>
+            </div>
+            <ul class="video-counter">
+                <li class="video-counter-item active">1</li>
+                <li class="video-counter-item">2</li>
+                <li class="video-counter-item">3</li>
+                <li class="video-counter-item">4</li>
+            </ul>
+        </div>
+    </article>
+    <article class="gallery" id="gallery">
+        <div class="gal-block">
+            <img src="img/gal-1.png" alt="">
+        </div>
+        <div class="gal-block">
+            <img src="img/gal-2.png" alt="">
+        </div>
+        <div class="gal-block">
+            <img src="img/gal-3.png" alt="">
+        </div>
+        <div class="gal-block">
+            <img src="img/gal-4.png" alt="">
+        </div>
+    </article>
+    <article class="contact" id="contact">
+        <div class="container">
+            <div class="contact-container">
+                <h2>want to hire us?</h2>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a tincidunt dui, vitae posuere ipsum. Praesent vehicula nunc eget risus vehicula rutrum. Vestibulum pulvinar sapien.
+                </p>
+                <input class="contact-btn" type="button" value="contact with us">
+            </div>
+        </div>
+    </article>
+    <footer>
+        <div class="container">
+            <h2><a href="index.html">faun</a></h2>
+            <span>all rights reserved by faun template for rock bands</span>
+        </div>
+    </footer>
+
+    <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('.toggle').click(function() {
+                $(this).toggleClass('active');
+                $('.overlay').toggleClass('active');
+                $('body').toggleClass('noscroll');
+                $('.menu').toggleClass('active');
+            });
+            $('.menu-item').click(function() {
+                $('.toggle').removeClass('active');
+                $('.overlay').removeClass('active');
+                $('body').removeClass('noscroll');
+                $('.menu').removeClass('active');
+            });
+            $('.player-btn').click(function() {
+                $('.video .container').addClass('d-none');
+                document.getElementById('video').style.padding = '0';
+                document.getElementById('video').innerHTML = '<iframe width="100%" height="976" src="https://www.youtube.com/embed/T6x-kDiQsWM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
+            });
+        })
+    </script>
+></script>
+</body>
+</html>
